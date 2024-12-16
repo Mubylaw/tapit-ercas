@@ -190,7 +190,7 @@ const Landing = ({}) => {
           <img src="/assets/logo.png" alt="" />
         </div>
         <div className="split">
-          <div className="top">Team Neon 2024.</div>
+          <div className="top">Tapit 2024.</div>
           <div className="bots">
             <div className="links">
               <div className="nav-link">

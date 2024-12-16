@@ -1,6 +1,6 @@
 # Project Name
 
-Tapit by Neon
+Tapit
 
 ## Overview
 
