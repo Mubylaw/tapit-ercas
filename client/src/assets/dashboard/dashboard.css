@@ -1,0 +1,273 @@
+.home {
+  width: 100%;
+  min-height: 100vh;
+  background: url("/assets/Section.png") no-repeat center;
+  padding: 30px;
+}
+
+.home .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.home .header img:nth-child(3) {
+  cursor: pointer;
+}
+
+.home .tile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home .tile .top .name {
+  color: rgba(255, 255, 255, 0.41);
+  font-weight: 200;
+  font-size: 15px;
+}
+
+.home .tile .top .name.min {
+  font-size: 13px;
+  margin: 2px 0;
+}
+
+.home .tile .top .amount {
+  font-family: "Noto Sans", sans-serif;
+  color: #f4f4f4;
+  font-size: 32px;
+  margin: 7px 0;
+}
+
+.home .tile .bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.home .tile .bottom .cir {
+  background: #3535f2;
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.home .finger img {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.home .tile .bottom .bio {
+  background: #191919;
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: #f4f4f4;
+  font-weight: 300;
+  font-size: 12px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.home .tile .bottom .drop {
+  background: #1fd95e;
+  width: 9px;
+  height: 9px;
+  margin-right: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.home .tile .bottom .drop.red {
+  background: red;
+}
+
+.home .finger {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -60px;
+}
+
+.home .finger p {
+  position: absolute;
+  bottom: 50px;
+  font-size: 12px;
+  font-family: "Noto Sans", sans-serif;
+  color: #aaaaaa;
+  font-weight: 300;
+}
+
+.home .recent {
+  position: relative;
+  top: -55px;
+}
+
+.recent .subtitle {
+  text-align: center;
+  color: #f4f4f4;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.recent .pays {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.recent .pays .duo {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.recent .pays .duo .item {
+  width: calc(50% - 10px);
+  display: flex;
+  justify-content: space-between;
+  background: #191919;
+  border-radius: 7px;
+  padding: 10px;
+  color: #f4f4f4;
+}
+
+.recent .pays .duo .item .up {
+  display: flex;
+  align-items: start;
+}
+
+.recent .pays .duo .item .amount {
+  font-size: 14px;
+}
+
+.recent .pays .duo .item .deets {
+  margin-left: 13px;
+}
+
+.recent .pays .duo .item .deets .type {
+  color: #747576;
+  font-size: 12px;
+}
+
+.recent .pays .duo .item .deets .name {
+  font-size: 13px;
+  margin-bottom: 1px;
+}
+
+.home .nav {
+  position: fixed;
+  top: 0;
+  width: 250px;
+  padding: 50px 30px;
+  height: calc(100vh - 0px);
+  background: black;
+  right: 0;
+  z-index: 100;
+  transition: all ease 0.5s;
+}
+
+.nav.close {
+  right: -500px;
+}
+
+.nav .link {
+  margin: 20px 0;
+}
+
+.nav .link:nth-child(5) {
+  margin: 100px 0 0;
+}
+
+.nav .link:nth-child(2) {
+  margin: 50px 0 0;
+}
+
+.nav .icon {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  cursor: pointer;
+  width: 20px;
+  height: 30px;
+}
+
+.nav .icon span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 2px;
+  background: white;
+  transform: rotate(45deg);
+  position: relative;
+  top: 10px;
+}
+
+.nav .icon span:nth-child(2) {
+  transform: rotate(-45deg);
+  top: 8px;
+}
+
+.nav a {
+  color: white;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+@media (max-width: 960px) {
+  .recent .pays {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .home {
+    padding: 30px 15px;
+  }
+
+  .home .tile .bottom .bio {
+    padding: 7px 10px;
+    font-size: 10px;
+  }
+
+  .home .tile .bottom .drop {
+    background: #1fd95e;
+    width: 6px;
+    height: 6px;
+    margin-right: 7px;
+    position: relative;
+    top: -1px;
+  }
+
+  .home .tile .bottom .cir {
+    width: 17px;
+    height: 17px;
+  }
+
+  .home .tile .top {
+    max-width: 180px;
+  }
+
+  .home .tile .top .name {
+    font-size: 13px;
+  }
+
+  .home .tile .top .amount {
+    font-size: 24px;
+    margin: 4px 0;
+  }
+
+  .home .tile .top .name.min {
+    font-size: 12px;
+    margin: 1px 0;
+  }
+
+  .home .finger p {
+    text-align: center;
+    bottom: 30px;
+  }
+
+  .recent .pays .duo .item .amount {
+    display: none;
+  }
+}

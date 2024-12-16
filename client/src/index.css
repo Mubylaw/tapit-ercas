@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body,
+html {
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+  background: #fff8f8;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hai-con {
+  width: 83vw;
+  margin-left: 17vw;
+  padding: 35px 30px 15px;
+}
+
+.table {
+  box-shadow: 0px 4px 4px rgba(255, 238, 238, 0.47);
+  background: #ffffff;
+  border: 1px solid #fdeaea;
+  border-radius: 10px;
+  min-height: 80vh;
+  margin: 10px 0;
+}
+
+.table .list {
+  border: 1px solid #fdeaea;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  justify-content: space-between;
+  display: flex;
+  padding: 15px 20px;
+  font-size: 12px;
+  color: #373232;
+  align-items: center;
+  text-decoration: none;
+}
+
+.table .list:nth-child(1) {
+  border: none;
+}
+
+.table .list.head {
+  font-weight: 600;
+  color: #6a6565;
+}
+
+.table .sched {
+  padding: 4px 8px;
+  background: #eef6e9;
+  border-radius: 999px;
+  color: #278500;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table .list.bod {
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.table .list.bod:hover {
+  background: #fff8f8;
+}
+
+.btn_text {
+  transition: all 0.2s;
+}
+
+.btn-load {
+  position: relative;
+}
+
+.btn-load .btn_text {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.btn-load::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 4px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: button-loading-spinner 1s ease infinite;
+}
+
+.subscribe .btn-load::after {
+  border-top-color: #000000;
+}
+
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.flicker {
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: #f6f7f8;
+  background: linear-gradient(to right, #d5d5d5 8%, #f2f2f2 38%, #d5d5d5 54%);
+  background-size: 1000px 640px;
+
+  position: relative;
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.flick.flicker {
+  height: 20px;
+}
+
+.error {
+  background: red;
+  color: white;
+  opacity: 0.9;
+  font-weight: 300;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 15px 10px;
+}
+
+.load-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 60px);
+  margin: 30px;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #18a0fb;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #18a0fb transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1200px) {
+  .hai-con {
+    width: calc(100vw - 204px);
+    margin-left: 204px;
+  }
+}
+
+@media (max-width: 960px) {
+  .table .list {
+    overflow: scroll;
+  }
+
+  .table .list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .table .list div {
+    margin-right: 10px;
+  }
+
+  .table .list .date {
+    width: 75px;
+    min-width: 75px;
+  }
+
+  .table .list .address,
+  .table .list .name {
+    width: 125px;
+    min-width: 125px;
+  }
+
+  .table .rider {
+    width: 80px;
+    min-width: 80px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hai-con {
+    width: 100vw;
+    margin: 70px 0 0;
+  }
+}
